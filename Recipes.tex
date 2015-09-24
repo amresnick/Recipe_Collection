@@ -1,0 +1,52 @@
+\documentclass[11pt]{report}
+\usepackage{xcookybooky}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true, % make the links colored
+    linkcolor=blue, % color TOC links in blue
+    urlcolor=blue, % color URLs in blue
+    citecolor=red, % color  citations red
+    linktoc=all % 'all' will create links for everything in the TOC
+}
+
+\setRecipeColors{
+    recipename = black,
+    ing = black,
+    inghead = black,
+}
+
+\setRecipeSizes{
+    recipename = \normalsize,
+}
+
+\setHeadlines{
+    inghead = Ingredients,
+    prephead = Preparation,
+    hinthead = Hint,
+    calory = energy content,
+    continuationhead = Continuation,
+    continuationfoot = Continuation on next page
+}
+
+\title{\bf{A Collection of Recipes}}
+\author{Adam M. Resnick}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Greece}
+
+\begin{recipe}
+  {Test Recipe}
+\end{recipe}
+
+\chapter{Japan}
+
+\chapter{Turkey}
+
+\end{document}
