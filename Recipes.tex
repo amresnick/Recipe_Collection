@@ -8,8 +8,9 @@
 \usepackage{nicefrac}
 \usepackage[nowarnings,]{xcookybooky}
 \usepackage{blindtext}    % only needed for generating test text
+\usepackage{verbatim}
 \usepackage{hyperref}    % must be the last package
-\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
+\DeclareRobustCommand{\textfar}{\ensuremath{^{\circ}\mathrm{F}}}
 
 
 \setcounter{secnumdepth}{1}
@@ -46,22 +47,69 @@
 
 \tableofcontents
 
-\chapter{Japan}
-\section{Recipes}
-The following recipes are examples for the usage of the \texttt{xcookybooky} package. The copyright of the pictures is owned by Roman Gaus. If you are using MiKTeX~2.9 you should get no errors, no warnings and no overfull boxes. The underfull boxes are suppressed due to the settings.
-
-
+\begin{comment}
 \begin{recipe}
 [%
-    preparationtime = {\unit[1]{h}},
+    preparationtime = {\unit[30]{min}},
     bakingtime={\unit[1]{h}},
     bakingtemperature={\protect\bakingtemperature{
-        fanoven=\unit[230]{\textcelcius},
+        fanoven=\unit[230]{\textfar},
         topbottomheat=\unit[195]{°C},
         topheat=\unit[195]{°C},
         gasstove=Level 2}},
     portion = {\portion{5-6}},
     calory={\unit[3]{kJ}},
+    source = {Somebody you used know}
+]
+{Test Recipe}
+
+    \introduction{%
+        \blindtext
+    }
+
+    \ingredients
+    {%
+        2 bar & Dark Chocolate (above \unit[70]{\%})\\
+        3 & Eggs\\
+        \unit[200]{ml} & Cream\\
+        40 g & Sugar\\
+        50 g & Butter
+    }
+
+    \preparation
+    {%
+        \step \blindtext
+        \step \blindtext
+        \step \blindtext
+    }
+
+    \suggestion[Headline]
+    {%
+        \blindtext
+    }
+
+    \suggestion{%
+        \blindtext
+    }
+
+    \hint{%
+        Enjoy typesetting recipes with {\textbf{\Large\LaTeX}} and {\textbf{\Large xcookybooky!}}
+    }
+
+\end{recipe}
+\end{comment}
+
+\chapter {Greece}
+
+\chapter{Japan}
+\section{Fish}
+
+
+\begin{recipe}
+[%
+    preparationtime = {\unit[20]{min}},
+    bakingtime={\unit[15]{min}},
+    portion = {\portion{4}},
     source = {Somebody you used know}
 ]
 {Test Recipe}
