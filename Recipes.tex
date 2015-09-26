@@ -31,7 +31,7 @@
     bookmarksopen={true},
     pdfpagetransition={Glitter},
     colorlinks={true},
-    linkcolor={black},
+    linkcolor={red},
     urlcolor={blue},
     citecolor={black},
     filecolor={black},
@@ -48,8 +48,7 @@
 \tableofcontents
 
 \begin{comment}
-\begin{recipe}
-[%
+\begin{recipe}[%
     preparationtime = {\unit[30]{min}},
     bakingtime={\unit[1]{h}},
     bakingtemperature={\protect\bakingtemperature{
@@ -99,10 +98,68 @@
 \chapter {Greece}
 
 \chapter{Japan}
+
+
+\section{Soup and Dashi}
+\begin{recipe}[
+    preparationtime = {\unit[5]{min}},
+    bakingtime={\unit[15]{min}},
+    portion = {\unit[4]{Cups}},
+    source = {\href{http://justhungry.com/handbook/cooking-courses/japanese-cooking-101-lesson-1-its-all-about-dashi}{Just Hungry}}
+]
+{Ichiban Awase Dashi}
+
+    \introduction{%
+        Awase dashi seems to be the most commonly used dashi. It's simple, and quick to make, consisting only of kombu seaweed and dried bonito flakes. Dashi is widely used in Japanese recipes, and is much faster to make than western stocks. I'm pretty loose with the measurements for this, as everyone has their own, slightly different version. '
+    }
+
+    \ingredients{
+        \unit[4]{Cups} & Water\\
+        \unit[15]{g} & Kombu (15-20 sq. in)\\
+        \unit[15-30]{g} & Katsuobushi (A good handful or two)
+    }
+
+    \preparation{
+        \step Put the kombu and water in the pot. Let the kombu soak for 30 minutes to a day if possible. If you don't have time, skip the soaking step.
+        \step Bring the water to a gentle boil. Just as it starts to boil (bubbles forming on the edge of the pot) take out the kombu and save it for \hyperref[recipe:NibanDashi]{Niban Dashi}. Turn off the heat.
+        \step Add the katsuobushi and let it sit for 10-15 minutes. The katsuobushi flakes should mostly sink to the bottom.
+        \step Strain the dashi, and freeze the katsuobushi for \hyperref[recipe:NibanDashi]{Niban Dashi}.
+    }
+
+\label{recipe:IchibanAwaseDashi}
+\end{recipe}
+
+\begin{recipe}[
+    preparationtime = {\unit[2]{min}},
+    bakingtime={\unit[25]{min}},
+    portion = {\unit[4]{Cups}},
+    source = {\href{http://justhungry.com/handbook/cooking-courses/japanese-cooking-101-lesson-1-its-all-about-dashi}{Just Hungry}}
+]
+{Niban Awase Dashi}
+
+    \introduction{%
+        Awase dashi seems to be the most commonly used dashi. It's simple, and quick to make, consisting only of kombu seaweed and dried bonito flakes. Dashi is widely used in Japanese recipes, and is much faster to make than western stocks. I'm pretty loose with the measurements for this, as everyone has their own, slightly different version.
+    }
+
+    \ingredients{
+        \unit[4]{Cups} & Water (or however much you need)\\
+        1 & Set used ichiban dashi ingredients
+    }
+
+    \preparation{
+        \step Put the used kombu and katsuobushi in a pot with the water. I typically use as much water as niban dashi that I will need. Bring it all to a boil on high heat.
+        \step Turn down the heat and let it simmer for 10-15 minutes.
+        \step Turn off the heat. You can add an extra handful of katsuobushi flakes now if you'd like it to be a bit stronger.
+        \step Once the katsuobushi flakes have sunk to the bottom, strain the dashi. Discard the now twice-used ingredients.
+    }
+
+\label{recipe:NibanAwaseDashi}
+\end{recipe}
+
+\newpage
 \section{Fish}
 
-\begin{recipe}
-[%
+\begin{recipe}[
     preparationtime = {\unit[10]{min}},
     bakingtime={\unit[20]{min}},
     portion = {\portion{2}},
@@ -111,7 +168,7 @@
 {Saba Misoni}
 
     \introduction{%
-        Mackerel fillets are simmered in a miso-based sauce. It's an easy and quick way to cook mackerel and similar fish. This similar to Saba Nitsuke, although the flavor profile is different.
+        Mackerel fillets are simmered in a miso-based sauce. It's an easy and quick way to cook mackerel and similar fish. This similar to \hyperref[recipe:SabaMisoni]{Saba Nitsuke}, although the flavor profile is different.
     }
 
     \ingredients{
@@ -133,10 +190,10 @@
         \step Add the soy sauce, mix by swirling the pan. Take it off the heat and serve.
     }
 
+\label{recipe:SabaMisoni}
 \end{recipe}
 
-\begin{recipe}
-[%
+\begin{recipe}[
     preparationtime = {\unit[10-20]{min}},
     bakingtime={\unit[20]{min}},
     portion = {\portion{2}},
@@ -178,6 +235,7 @@
         Cooking more fish with this recipe is really more of a function of pan size. If the pan is such that you can get two mackerel mostly in the liquid, there's no need to double the liquid portions.
     }
 
+\label{recipe:SabaNitsuke}
 \end{recipe}
 
 \end{document}
