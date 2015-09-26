@@ -1,5 +1,5 @@
 
-\documentclass[11pt]{report}
+\documentclass[14pt]{report}
 
 % encoding, font, language
 \usepackage[T1]{fontenc}
@@ -7,7 +7,6 @@
 \usepackage{lmodern}
 \usepackage{nicefrac}
 \usepackage[nowarnings,]{xcookybooky}
-\usepackage{blindtext}    % only needed for generating test text
 \usepackage{verbatim}
 \usepackage{hyperref}    % must be the last package
 \DeclareRobustCommand{\textfar}{\ensuremath{^{\circ}\mathrm{F}}}
@@ -110,7 +109,7 @@
 {Ichiban Awase Dashi}
 
     \introduction{%
-        Awase dashi seems to be the most commonly used dashi. It's simple, and quick to make, consisting only of kombu seaweed and dried bonito flakes. Dashi is widely used in Japanese recipes, and is much faster to make than western stocks. I'm pretty loose with the measurements for this, as everyone has their own, slightly different version. '
+        Awase dashi seems to be the most commonly used dashi. It's simple, and quick to make, consisting only of kombu seaweed and dried bonito flakes. Dashi is widely used in Japanese recipes, and is much faster to make than western stocks. I'm pretty loose with the measurements for this, as everyone has their own, slightly different version.
     }
 
     \ingredients{
@@ -130,6 +129,36 @@
 \end{recipe}
 
 \begin{recipe}[
+    preparationtime = {\unit[10]{min}},
+    bakingtime={\unit[15]{min}},
+    portion = {\unit[4]{Cups}},
+    source = {\href{http://www.justonecookbook.com/iriko-dashi-anchovy-stock}{Just One Cookbook}}
+]
+{Iriko  Dashi}
+
+    \introduction{%
+        Iriko dashi is made from dried anchovies, which are generally cheaper than katsuobushi. The aroma and flavor a bit more fishy than normal \hyperref[recipe:IchibanAwaseDashi]{awase dashi}. Iriko dashi seems to mainly be used to make miso soup, which is naturally strongly flavored from the miso.
+    }
+
+    \ingredients{
+        \unit[4]{Cups} & Water\\
+        \unit[40]{g} & Iriko (about a cup)
+    }
+
+    \preparation{
+        \step If you are bored, you can decapitate and de-stomach the iriko. Supposedly, this makes the dashi less bitter. I've never tried.
+        \step Soak the iriko in the water for 30 minutes to overnight.
+        \step Transfer to a pot, and slowly bring to a boil. Once boiling, reduce heat to low and simmer for 10 minutes.
+        \step Turn off the heat and strain the dashi.
+    }
+
+    \hint{
+        Refrigerate or freeze unused dashi. It will keep for about 3 or 4 days in the fridge.
+    }
+\label{recipe:IrikoDashi}
+\end{recipe}
+
+\begin{recipe}[
     preparationtime = {\unit[2]{min}},
     bakingtime={\unit[25]{min}},
     portion = {\unit[4]{Cups}},
@@ -138,7 +167,7 @@
 {Niban Awase Dashi}
 
     \introduction{%
-        Awase dashi seems to be the most commonly used dashi. It's simple, and quick to make, consisting only of kombu seaweed and dried bonito flakes. Dashi is widely used in Japanese recipes, and is much faster to make than western stocks. I'm pretty loose with the measurements for this, as everyone has their own, slightly different version.
+        Niban dashi will, of course, have a flavor that is not as strong as ichiban dashi. Thus, it is good to use it in dishes that will have their own, stronger flavor.
     }
 
     \ingredients{
