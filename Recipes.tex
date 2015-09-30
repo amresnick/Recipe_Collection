@@ -1,13 +1,9 @@
-
 \documentclass[14pt]{report}
 
-% encoding, font, language
-\usepackage[T1]{fontenc}
-\usepackage[latin1]{inputenc}
-\usepackage{lmodern}
-\usepackage{nicefrac}
-\usepackage[nowarnings,]{xcookybooky}
+\usepackage[backend=biber, sorting=none]{biblatex}
+\usepackage{units}
 \usepackage{verbatim}
+\usepackage[nowarnings,]{xcookybooky}
 \usepackage{hyperref}    % must be the last package
 \DeclareRobustCommand{\textfar}{\ensuremath{^{\circ}\mathrm{F}}}
 
@@ -18,6 +14,8 @@
 }
 \renewcommand{\subsectionmark}[1]{% no implementation to display the section name instead
 }
+
+\addbibresource{../Bibtex/bibtex.bib}
 
 \hypersetup{
     pdfauthor={Adam M. Resnick},
@@ -32,7 +30,7 @@
     colorlinks={true},
     linkcolor={red},
     urlcolor={blue},
-    citecolor={black},
+    citecolor={red},
     filecolor={black},
 }
 \hbadness=10000 % Ignore underfull boxes
@@ -94,17 +92,57 @@
 \end{recipe}
 \end{comment}
 
+% GREECE
 \chapter {Greece}
 
+% MEAT
+\section{Meat}
+
+\begin{recipe}[
+    preparationtime = {\unit[20]{min}},
+    bakingtime={\unit[2]{hours}},
+    portion = {\unit[4]{Servings}},
+    source = {Adapted from \cite{EssentialsOfMediterraneanCooking}}
+]
+{Pork Smothered in Leeks}
+
+    \introduction{%
+
+    }
+
+    \ingredients{
+        \unit[1.75]{lb} & Pork butt cut into 1 inch cubes\\
+        \unit[1]{Tbsp} & Kombu (15-20 sq. in)\\
+        1 & Chopped yellow onion\\
+        \unit[1]{Cup} & Chopped tomatoes\\
+        1 & Chopped celery stalk\\
+        9 & Leek stalks
+    }
+
+    \preparation{
+        \step Sprinkle meat with sea salt and fresh ground pepper.
+        \step Put the olive oil in a pot over medium heat. Once hot, brown the meat, turning to brown all sides. This will take 8-10 minutes. If working in groups, put the browned meat on a plate and move on to the next batch of meat.
+        \step Return all the meat to the pot, add the onion and cook for about 5 minutes, until the onion has softened.
+        \step Add the tomatoes, celery and enough water to almost cover all the meat. Bring to a boil, stirring occasionally.
+        \step Reduce the heat to medium-low, cover and simmer gently until the meat is starting to be tender, about 45 minutes or an hour.
+        \step Halve the leeks lengthwise and rinse thoroughly as there is sometimes sand between the layers of the leek.
+        \step Put the cleaned leeks in a pan, add a small layer of water, bring it to a boil and reduce to medium-low. Simmer for 10 minutes, then drain.
+        \step Put the leeks over the pork, cover and simmer until most of the liquid has been absorbed and the meat and leeks are very tender (another 30 minutes to an hour).
+    }
+
+\label{recipe:PorkSmotheredInLeeks}
+\end{recipe}
+
+% JAPAN
 \chapter{Japan}
 
-
+% DASHI
 \section{Soup and Dashi}
 \begin{recipe}[
     preparationtime = {\unit[5]{min}},
     bakingtime={\unit[15]{min}},
     portion = {\unit[4]{Cups}},
-    source = {\href{http://justhungry.com/handbook/cooking-courses/japanese-cooking-101-lesson-1-its-all-about-dashi}{Just Hungry}}
+    source = {\cite{JustHungryDashi}, \cite{JustOneDashi}}
 ]
 {Ichiban Awase Dashi}
 
@@ -132,7 +170,7 @@
     preparationtime = {\unit[10]{min}},
     bakingtime={\unit[15]{min}},
     portion = {\unit[4]{Cups}},
-    source = {\href{http://www.justonecookbook.com/iriko-dashi-anchovy-stock}{Just One Cookbook}}
+    source = {\cite{JustOneIrikoDashi}}
 ]
 {Iriko  Dashi}
 
@@ -162,7 +200,7 @@
     preparationtime = {\unit[2]{min}},
     bakingtime={\unit[25]{min}},
     portion = {\unit[4]{Cups}},
-    source = {\href{http://justhungry.com/handbook/cooking-courses/japanese-cooking-101-lesson-1-its-all-about-dashi}{Just Hungry}}
+    source = {\cite{JustHungryDashi}}
 ]
 {Niban Awase Dashi}
 
@@ -192,7 +230,7 @@
     preparationtime = {\unit[10]{min}},
     bakingtime={\unit[20]{min}},
     portion = {\portion{2}},
-    source = {\href{http://www.justonecookbook.com/saba-misoni-simmered-mackerel-in-miso-sauce/}{Just One Cookbook}}
+    source = {\cite{JustOneSabaMisoni}}
 ]
 {Saba Misoni}
 
@@ -202,13 +240,13 @@
 
     \ingredients{
         1 & Whole mackerel (or 2 fillets)\\
-        \unit[1/2]{Tsp} & Soy Sauce\\
+        \unit[\nicefrac{1}{2}]{Tsp} & Soy Sauce\\
         1 & Skinny green onion (garnish)\\
         2 & Round, decoratively cut carrot slices (garnish)\\
         \unit[2]{Tbsp} & Sake\\
         \unit[2]{Tbsp} & Sugar\\
         \unit[2]{Tbsp} & Miso\\
-        \unit[1/2]{Cup} & Water\\
+        \unit[\nicefrac{1}{2}]{Cup} & Water\\
         1-3 & Thin ginger slices
     }
 
@@ -226,7 +264,7 @@
     preparationtime = {\unit[10-20]{min}},
     bakingtime={\unit[20]{min}},
     portion = {\portion{2}},
-    source = {\href{http://kanakoskitchen.com/2010/07/19/saba-nitsuke/}{Kanako's Kitchen}}
+    source = {\cite{KanakoSabaNitsuke}}
 ]
 {Saba Nitsuke}
 
@@ -238,10 +276,10 @@
 
     \ingredients{
         1 & Whole mackerel (or fillets)\\
-        \unit[1/3]{Cup} & Sake\\
-        \unit[1/3]{Cup} & Mirin\\
+        \unit[\nicefrac{1}{3}]{Cup} & Sake\\
+        \unit[\nicefrac{1}{3}]{Cup} & Mirin\\
         \unit[1]{Cup} & Water\\
-        \unit[1/3]{Cup} & Soy Sauce\\
+        \unit[\nicefrac{1}{3}]{Cup} & Soy Sauce\\
         \unit[3]{Tbsp} & Sugar\\
         1 & Thin ginger slice
     }
@@ -267,4 +305,5 @@
 \label{recipe:SabaNitsuke}
 \end{recipe}
 
+\printbibliography[heading=bibintoc]
 \end{document}

@@ -4,3 +4,8 @@
 *.out
 *.synctex.gz
 *.toc
+*.bib
+*.bbl
+*.bcf
+*.blg
+*.xml
